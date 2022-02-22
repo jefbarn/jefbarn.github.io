@@ -11,7 +11,8 @@
       html {
         box-sizing: border-box;
         font-size: 14px;
-        color: rgba(0, 0, 0, 0.87);
+        color: black;
+        opacity: 0.9;
       }
 
       *,
@@ -47,7 +48,8 @@
       aside h2 {
         font-size: 18px;
         font-weight: normal;
-        color: rgba(255, 255, 255, 0.8);
+        color: white;
+        opacity: 0.8;
       }
 
       aside h3 {
@@ -65,12 +67,14 @@
 
       aside p {
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.8);
+        color: white;
+        opacity: 0.8;
       }
 
       aside a {
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.8);
+        color: white;
+        opacity: 0.8;
       }
 
       main {
@@ -89,7 +93,7 @@
       main h3 {
         font-size: 16px;
         font-weight: normal;
-        color: rgba(0, 0, 0, 0.87);
+        opacity: 0.9;
         margin: 0;
         line-height: 1.5;
       }
@@ -97,7 +101,7 @@
       main h4 {
         font-size: 14px;
         font-weight: normal;
-        color: rgba(0, 0, 0, 0.54);
+        opacity: 0.6;
         margin: 0;
         line-height: 1.5;
       }
@@ -113,6 +117,10 @@
       section {
         margin: 16px 0;
         page-break-inside: avoid;
+      }
+
+      .soft {
+        opacity: 0.6;
       }
     </style>
   </head>
@@ -147,31 +155,31 @@
           <h4>Programming Languages</h4>
           <p>
             TypeScript, JavaScript, C, C++, Java, HTML, CSS, Python, Perl,
-            Swift, Ruby, Assembly, SQL
+            Swift, Ruby, Assembly, SQL, Rust
           </p>
         </section>
         <section>
           <h4>Platforms</h4>
           <p>
-            Docker, Linux, Windows, VmWare, Mac OS X, AIX, Solaris, HP-UX, UNIX
+            Docker, Linux, Windows, VmWare, Mac OS X, AIX, Solaris, HP-UX, UNIX
           </p>
         </section>
         <section>
           <h4>Networking</h4>
           <p>
-            Distributed Systems, TCP/IP, SAN, Fibre Channel, SCSI
+            Distributed Systems, TCP/IP, SAN, Fibre Channel, SCSI
           </p>
         </section>
         <section>
           <h4>Databases</h4>
           <p>
-            MongoDb, CouchDb, SQL Server, MySQL, PostgreSQL, IndexedDb
+            MongoDb, CouchDb, SQL Server, MySQL, PostgreSQL, IndexedDb
           </p>
         </section>
         <section>
           <h4>Misc</h4>
           <p>
-            Git, SVN, PowerPC, Multithreading, Parallel Computing, Database
+            Git, SVN, PowerPC, Multithreading, Parallel Computing, Database
             Design, High Availability
           </p>
         </section>
@@ -182,13 +190,37 @@
         <p>
           Software engineer with 15+ years professional software development
           experience. Lifelong passion for learning new technologies with
-          experience in a breadth of software languages and frameworks.
-          Demonstrated ability to work in large teams and individually.
+          experience in a breadth of software languages and frameworks.
+          Demonstrated ability to work in large teams and individually.
         </p>
         <h2>Experience</h2>
         <section>
+          <h3>Software Engineer, GCI</h3>
+          <h4>Enterprise Performance Monitoring and Visualization</h4>
+          <h4>Anchorage, AK — 2019 - Present</h4>
+          <ul>
+            <li>
+              Developed software and architecture to capture and process
+              cellular performance metrics and enable performance monitoring of
+              a multi-vendor cellular network.
+              <span class="soft">(Rust, SQL)</span>
+            </li>
+            <li>
+              Enabled integration between fault monitoring and ticketing
+              platforms. <span class="soft">(Perl)</span>
+            </li>
+            <li>
+              Provided real-time data feed from asset management database to
+              ticketing platform. <span class="soft">(Typescript, SQL)</span>
+            </li>
+            <li>
+              Mentor junior developers.
+            </li>
+          </ul>
+        </section>
+        <section>
           <h3>Software Engineer, GCI (Elwood Staffing, Opti Staffing)</h3>
-          <h4>Anchorage, AK — 2015 - Present</h4>
+          <h4>Anchorage, AK — 2015 - 2019</h4>
           <ul>
             <li>
               Developed a business critical application for viewing networking
@@ -202,12 +234,12 @@
             </li>
             <li>
               Designed application architecture and middleware necessary to
-              interface with legacy business products.
+              interface with legacy business products.
             </li>
             <li>
               Managed full application development life cycle, including
               development, testing, integration and deployment using modern
-              DevOps software techniques.
+              DevOps software techniques.
             </li>
             <li>
               Mentor junior developers to build a functional cross-disciplinary
@@ -225,14 +257,14 @@
             </li>
             <li>
               Developed error recovery and availability firmware for IBM XIV
-              Storage System.
+              Storage System.
             </li>
             <li>
               Helped develop routines for storing compressed and encrypted data.
             </li>
             <li>
               Designed interoperability features for IBM DS8000 Storage System
-              and AIX UNIX to support disaster recovery scenarios.
+              and AIX UNIX to support disaster recovery scenarios.
             </li>
             <li>
               Mentored and trained new team members.
@@ -256,15 +288,15 @@
             </li>
             <li>
               Enabled industry leading SAN environments by designing and
-              implementing advanced metadata management algorithms.
+              implementing advanced metadata management algorithms.
             </li>
             <li>
               Designed Java based GUI client for internal source code control
-              and defect tracking.
+              and defect tracking.
             </li>
             <li>
               Developed an Asynchronous Messaging over SCSI protocol to
-              facilitate peer-to-peer storage mirroring.
+              facilitate peer-to-peer storage mirroring.
             </li>
           </ul>
         </section>
@@ -274,7 +306,7 @@
           <ul>
             <li>
               Developed device drivers for IBM tape backup products on Solaris
-              and Linux platforms.
+              and Linux platforms.
             </li>
           </ul>
         </section>
@@ -288,7 +320,7 @@
             </li>
             <li>
               Installed and maintained audio / video networks related to the
-              encoding and  distribution of college courses.
+              encoding and distribution of college courses.
             </li>
           </ul>
         </section>
@@ -366,7 +398,7 @@
           <h3>Career Break</h3>
           <h4>Anchorage, AK — 2012 - 2015</h4>
           <p>
-            Enjoyed a mid life retirement to pursue adventure sports and world
+            Enjoyed a midlife retirement to pursue adventure sports and world
             travel.
           </p>
         </section>
