@@ -32,43 +32,46 @@
       }
     </style>
     <script type="module">
-      import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
-      import { startCase } from "https://cdn.skypack.dev/lodash-es";
+      import { generateSlug } from "https://cdn.jsdelivr.net/npm/random-word-slugs/+esm";
 
-      function generate(count /* number */) {
+      function generate(count) {
         return [
-          ...Array.from({ length: count - 1 }, () =>
-            startCase(faker.word.adjective()).replaceAll(" ", "")
-          ),
-          startCase(faker.word.noun()),
-          faker.random.numeric(count),
+          generateSlug(count, { format: "title" }),
+          Math.floor(10 ** (count - 1) + Math.random() * 9 * 10 ** (count - 1)),
           "!",
-        ].join("");
+        ]
+          .join("")
+          .replaceAll(" ", "");
       }
 
       for (const [k, strength] of [
-        "strong",
-        "stronger",
-        "strongest",
+        "Strong",
+        "Stronger",
+        "Strongest",
       ].entries()) {
         const section = document.createElement("section");
-        section.id = strength;
+        section.id = strength.toLowerCase();
         document.getElementById("main").appendChild(section);
-        section.appendChild(document.createTextNode(startCase(strength)));
+        section.appendChild(document.createTextNode(strength));
+
         for (let i = 0; i < 5; i++) {
           const pass = generate(k + 2);
+
           const line = document.createElement("div");
           line.innerText = pass;
           section.appendChild(line);
+
           const button = document.createElement("button");
-          // button.innerText = "copy";
           button.onclick = () => {
             navigator.clipboard.writeText(pass);
           };
-          const icon = document.createElement('img')
-          icon.src = 'https://cdn.jsdelivr.net/npm/@mdi/svg/svg/content-copy.svg'
-          icon.alt = 'copy'
-          button.appendChild(icon)
+
+          const icon = document.createElement("img");
+          icon.src =
+            "https://cdn.jsdelivr.net/npm/@mdi/svg/svg/content-copy.svg";
+          icon.alt = "copy";
+          button.appendChild(icon);
+
           line.appendChild(button);
         }
       }
